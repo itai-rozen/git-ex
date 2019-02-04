@@ -6,7 +6,7 @@ function renderProjs() {
     var strHtmls = gProjs.map(function(proj) {
         return `
         <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" onclick="renderModal(${proj.id})" data-toggle="modal" href="#projectsModal">
+        <a class="portfolio-link" onclick="renderModal(${proj.id})" data-toggle="modal" href="#portfolioModal1">
         <div class="portfolio-hover">
         <div class="portfolio-hover-content">
         <i class="fa fa-plus fa-3x"></i>

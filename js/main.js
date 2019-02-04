@@ -32,12 +32,6 @@ function createProj(id, name, title, desc, url, date, labels) {
     }
 }
 
-
-
-
-
-
-
 function getProjById(id) {
     return gProjs.find(function (proj) {
         return  (proj.id === id);

@@ -1,0 +1,203 @@
+@import url(../lib/bootstrap/bootstrap.css);
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+    font-size: 16px;
+    background-image: url(../img/wood.jpg);
+  }
+
+  body.rtl {
+    direction: rtl;
+}
+
+  header {
+    position: relative;
+    background-color: rgba(127, 10, 173, 0.5);
+    width: 100%;
+    height: 40px;
+    padding: 0px;
+    margin: 20px;
+}
+
+header > img {
+    cursor: pointer;
+    float: right;
+    height: 38px;
+    width: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: antiquewhite;
+    padding: 30px 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.modal-container {
+
+    flex: 1;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    width: 25vh;
+    height: 70vh;
+    padding: 10px;
+
+}
+
+.book-details {
+    position: relative;
+    flex: 1;
+    width: 10%;
+    padding: 5px;
+    min-width : 200px;
+    max-width : 200px;
+    text-align: center;
+    color: white;
+  }
+
+h1 span img {
+    
+    width: 150px;
+    height: 150px;
+}
+span button {
+    width: 100%;
+    margin: 2px 2px;
+    border-radius: 13px;
+}
+
+span button:hover {
+    opacity : 0.5;
+}
+
+
+table {
+    margin: 0 20% ;
+    opacity: 0.9;
+    border-radius: 13px;
+    margin-top: 20px;
+
+}
+.books-content tr {
+    border-top: 2px solid black;
+}
+.books-content td {
+    max-width: 100%;
+    padding: 10px 20px;
+}
+
+
+
+.book-details img {
+    width: 100%; 
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.close {
+visibility:hidden;
+}
+
+.modal-rate {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 100%;
+    height: 30%;
+    transition: 0.5s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3em;
+    max-height: 100%;
+    text-align: center;
+    padding-top: 50px;
+    border: 3px solid black;
+    border-radius: 14px;
+    z-index : 1;
+    background-color: beige;
+}
+
+.modal-add {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 100%;
+    height: 30%;
+    transition: 1s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1em;
+    max-height: 100%;
+    text-align: center;
+    padding-top: 20px;
+    border: 3px solid black;
+    border-radius: 14px;
+    z-index : 1;
+    background-color: beige;
+}
+
+.modal-rate button,.modal-add button {
+    position: relative;
+    border: none;
+    border-radius: 13px;
+    background-color:red;
+    color: white;
+    font-style: oblique;
+    text-align: center;
+    font-size: 0.3em;
+    width: 60px;
+    height: 30px;
+    top: 60%;
+}
+
+.modal-rate .green {
+    transition: 0.3s;
+    background-color: green;
+    border: 7px solid green;
+}
+
+
+.book-rate img {
+    height: 30px;
+    width: 30px;
+}
+
+ul {
+    font-size: 0.5em;
+    position: absolute;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li img {
+    position: relative;
+    max-width: 100%;
+    margin-right: 15px;
+    height: 35px;
+    width: 35px;
+}
+
+ .plus {
+    font-size: 2em;
+    color: greenyellow;
+    background-color:crimson;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+
+}

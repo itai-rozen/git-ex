@@ -34,7 +34,7 @@ function renderModal(id) {
     $('.project-date').html(proj.publishedAt);
     $('.project-category').html(''+proj.labels[0]+','+proj.labels[1]);
     $('.modal-img').html('<img class="img-fluid d-block mx-auto" src="img/portfolio/'+proj.id+'-full.jpg" alt="">')
-
+    $('.project-link').html('<a href="./projs/'+proj.id+'/index.html" ">Try it!</a>')
 }
 
 function onSubmitForm(){

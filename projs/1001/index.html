@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+</head>
+
+<body onload="init()">
+    <h1 class="animate flash" data-trans="Book-Shop" style="font-family:'ZCOOL KuaiLe', cursive">Book Shop
+        <span><img src="img/logo.png"></span>
+    </h1> 
+    <header>
+        <img onclick="onTrans('en')" src="img/en.png" alt="" srcset="">
+        <img onclick="onTrans('he')" src="img/he.jpg" alt="" srcset="">
+    </header>
+
+    <div class="main">
+
+        <section class="modal-container close">
+
+            <div class="book-details ">
+                <img src="img/blank.png" alt="" srcset="">
+                <div class="book-id"></div>
+                <div class="centered"></div>
+                <div class="price"></div>
+                <button data-trans="rate-me" onclick="onRateBook()">rate me</button>
+                <div class="rate" data-trans="current-rate">Current Rate: <div class="book-rate"><br></div></div>
+            </div>
+        </section>
+        <section class="books-content">
+            <div class="btn-container">
+                <button data-trans="next-page" onclick="onNextPage()">Next page</button>
+                <button data-trans="prev-page" onclick="onPrevPage()">Prev page</button>
+            </div>
+            <table class="table-dark table-hover">
+                <thead>
+                    <th data-trans="id"  scope="col">#id</th>
+                    <th data-trans="name" scope="col">Name</th>
+                    <th data-trans="price" scope="col">Price</th>
+                    <th data-trans="actions" scope="col">Actions</th>
+                    <th data-trans="add" onclick="onReadaAndAddNewBook()" scope="col" class="plus">Add+</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <div class="modal-rate close">
+        <ul>  
+            <li data-trans="please-rate" >please rate</li>
+            <li><div><img class="star-1" onclick="updateRate(1)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-2" onclick="updateRate(2)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-3" onclick="updateRate(3)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-4" onclick="updateRate(4)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-5" onclick="updateRate(5)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-6" onclick="updateRate(6)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-7" onclick="updateRate(7)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-8" onclick="updateRate(8)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-9" onclick="updateRate(9)" src="img/star-empty.png"></div></li>
+            <li><div><img class="star-10" onclick="updateRate(10)" src="img/star-empty.png"></div></li>
+        </ul> 
+        <button onClick='hideModal(".modal-rate")'>&times;</button>
+            </div>
+            <form action="javascript:void(0);" onsubmit="addBook()">
+
+                <div  class="modal-add close">
+                    <br><span data-trans="name">Name</span>   <br>
+                    <input type="text" name="book-name" class="book-name">
+                    <br> <span data-trans="price">price</span><br> 
+                    <input type="text" name="book-price" class="book-price"> 
+                    <input type="submit"  value="save">  
+                </div>
+            </form>
+ 
+    <script src="js/main-books.js"></script>
+    <script src="js/rate-service.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/books-service.js"></script>
+    <script src="js/util-service.js"></script>
+    <script src="js/jquery.js"></script>
+</body>
+
+</html>
